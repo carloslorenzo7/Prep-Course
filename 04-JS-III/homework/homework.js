@@ -83,8 +83,8 @@ function agregarNumeros(numeros) {
   let suma = 0;
 for(let i=0; i< numeros.length; i++) {
   suma = suma + numeros [i];
-  return suma
 }
+return suma;
 }
 
 
@@ -92,10 +92,16 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-  let promedio = 0;
-  let suma= agregarNumeros(resultadosTest);
-  promedio= suma / resultadosTest.lenght;
-  }
+  var promedio = 0;
+  for (var i= 0; i < resultadosTest.length; i++){
+      promedio= promedio + resultadosTest[i];
+    }
+    return promedio / resultadosTest.length;
+    }
+  
+
+  
+
 
 
 function numeroMasGrande(numeros) {
@@ -114,7 +120,7 @@ function numeroMasGrande(numeros) {
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+// Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
   if (arguments.length < 1){
     return 0;
@@ -171,8 +177,8 @@ function todosIguales(arreglo) {
  let numero = arreglo [0];
  for (let i= 1; i<arreglo.length; i++){
   if(numero === arreglo [i]){
-    
-  } return true;
+     return true;
+  }
  }
  return false;
 } 
